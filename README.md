@@ -49,8 +49,10 @@ How
 ```racket
 #lang racket
 
-(require "with.rkt")
+(require "with.rkt"      ; "with" macro
+         syntax/modread) ; module-reading-parameterization
 
+(define file-path "foo.rkt")
 
 (with ([(out temp-file) (atomic-output-file file-path)]
        [in (input-file file-path)]

@@ -19,6 +19,11 @@
      (%with-impl "call-with-"
        #'(with ([(vars ...) (proc)] others ...) body ...))]
 
+    ; one variable
+    [(with ([var proc-maybe-args] others ...) body ...)
+     (%with-impl "call-with-"
+       #'(with ([(var) proc-maybe-args] others ...) body ...))]
+
     ; arguments without variables
     [(with ((proc args ...) others ...) body ...)
      (%with-impl "with-"
