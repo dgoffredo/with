@@ -1,3 +1,5 @@
+![with](with.png)
+
 with
 ====
 Convenient syntax to combine `with-` and `call-with-` invocations.
